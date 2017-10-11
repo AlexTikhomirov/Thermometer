@@ -69,7 +69,6 @@ class ViewController: UIViewController, colorDelegate {
         colortubeBtn.backgroundColor = color
         colorShadowBtn.backgroundColor = color
         colorBackgroundBtn.backgroundColor = color
-        colorBackgroundBtn.backgroundColor = color
         colorItem = color;
     }
 

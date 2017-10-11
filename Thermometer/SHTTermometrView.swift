@@ -183,10 +183,11 @@ import CoreText
         i = sliderMin
         while i < sliderMax {
             path.closeSubpath()
-            path.addRect(CGRect.init(x: 0, y: Int(markingStep / 10) * i + startOffset * 2,
+            path.addRect(CGRect.init(x: 0, y: Int(markingStep / 9.5) * i + startOffset * 2 + 20,
                                      width: 50, height: 15))//bounds
             let attrString = NSAttributedString(string: "\(i)")
             let framesetter = CTFramesetterCreateWithAttributedString(attrString as CFAttributedString)
+            
             let frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, attrString.length), path, nil)
             CTFrameDraw(frame, context)
             i += 10
